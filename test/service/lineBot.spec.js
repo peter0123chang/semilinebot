@@ -6,7 +6,7 @@ describe('Test about Line Bot\'s Services', () => {
     it('[Check Type] ', (done) => {
       LineBot.authentication({headers: {}})
       .then((result) => {
-        result.should.be.an.Object().and.have.keys('hash', 'token', 'isValid');
+        result.should.be.an.Object().and.have.keys('hash', '3cL4zroJybMhWDUTZPUnLbxzPjfsoNu5FO0EqmZ/fhOka8bgzPZBCCp2EkmVw4l5lRUhDRML3vSuT9wV+VUd/xzw02X6FL6nFi8LaaT8NDuJcNJaaIIyNDzB/C5dfeU21BS73yzS3jQ88fmlwQS1VAdB04t89/1O/w1cDnyilFU=', 'isValid');
         result.hash.should.be.String();
         result.hash.length.should.be.equal(44);
         result.token.should.be.String();
@@ -21,7 +21,7 @@ describe('Test about Line Bot\'s Services', () => {
   });
 
   describe('Reply', () => {
-    const testRequestOnLineWebhooks = {body: { events: [{"replyToken":"00000000000000000000000000000000","type":"message","timestamp":1451617200000,"source":{"type":"user","userId":"Udeadbeefdeadbeefdeadbeefdeadbeef"},"message":{"id":"100001","type":"text","text":"Hello,world"}},{"replyToken":"ffffffffffffffffffffffffffffffff","type":"message","timestamp":1451617210000,"source":{"type":"user","userId":"Udeadbeefdeadbeefdeadbeefdeadbeef"},"message":{"id":"100002","type":"sticker","packageId":"1","stickerId":"1"}}]
+    const testRequestOnLineWebhooks = {body: { events: [{"replyToken":"3cL4zroJybMhWDUTZPUnLbxzPjfsoNu5FO0EqmZ/fhOka8bgzPZBCCp2EkmVw4l5lRUhDRML3vSuT9wV+VUd/xzw02X6FL6nFi8LaaT8NDuJcNJaaIIyNDzB/C5dfeU21BS73yzS3jQ88fmlwQS1VAdB04t89/1O/w1cDnyilFU=","type":"message","timestamp":1451617200000,"source":{"type":"user","userId":"Udeadbeefdeadbeefdeadbeefdeadbeef"},"message":{"id":"100001","type":"text","text":"Hello,world"}},{"replyToken":"ffffffffffffffffffffffffffffffff","type":"message","timestamp":1451617210000,"source":{"type":"user","userId":"Udeadbeefdeadbeefdeadbeefdeadbeef"},"message":{"id":"100002","type":"sticker","packageId":"1","stickerId":"1"}}]
 }};
     const requestWithFailed = {body: { events: {}}};
 
