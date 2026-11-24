@@ -1,0 +1,22 @@
+{
+  "name": "line-ai-agent",
+  "version": "1.0.0",
+  "description": "LINE AI Agent powered by Claude",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.13.0",
+    "@line/bot-sdk": "^11.4.0",
+    "express": "^5.3.0",
+    "zod": "^4.6.7"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "private": true
+}
